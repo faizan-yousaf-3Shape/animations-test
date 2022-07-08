@@ -11,10 +11,12 @@ import { Subscription } from 'rxjs';
 export class SecondComponent implements OnInit, OnDestroy {
   private subscriptions: Subscription[] = [];
   protected data: any;
-  constructor(private secondService: SecondService) { }
+  constructor(private secondService: SecondService) { 
+    console.log("second component const");
+  }
 
   ngOnInit(): void {
-    console.log("second component init")
+    console.log("second component init");
     this.subscriptions.push(
       this.secondService.getData().subscribe(data => {
         this.data = data;
@@ -23,7 +25,7 @@ export class SecondComponent implements OnInit, OnDestroy {
     }
     
   ngOnDestroy(): void {
-    console.log("second component destroy")
+    console.log("second component destroy");
     this.subscriptions.forEach(s => s.unsubscribe());
   }
 }

@@ -14,7 +14,7 @@ export class SecondComponent implements OnInit, OnDestroy {
   constructor(private secondService: SecondService) { }
 
   ngOnInit(): void {
-    console.log("first component init")
+    console.log("second component init")
     this.subscriptions.push(
       this.secondService.getData().subscribe(data => {
         this.data = data;
@@ -22,8 +22,8 @@ export class SecondComponent implements OnInit, OnDestroy {
       );
     }
     
-  ngOnDestroy(): void {0
-    console.log("first component destroy")
+  ngOnDestroy(): void {
+    console.log("second component destroy")
     this.subscriptions.forEach(s => s.unsubscribe());
   }
 }

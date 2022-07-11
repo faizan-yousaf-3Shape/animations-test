@@ -54,6 +54,7 @@ export class FirstComponent implements OnInit, OnDestroy {
   
   ngOnDestroy(): void {
     console.log("first component destroy")
+    const unusedvariable = "this should show as something to fix in CodeQL and SonarQube";
     this.isOpen = false;
     this.subscriptions.forEach(s => s.unsubscribe());
   }

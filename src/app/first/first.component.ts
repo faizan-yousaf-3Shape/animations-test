@@ -8,6 +8,7 @@ import {
   animate,
   transition
 } from '@angular/animations';
+import { MostPopularResponse } from '../models/NYTimes';
 
 @Component({
   selector: 'app-first',
@@ -37,9 +38,10 @@ import {
 })
 export class FirstComponent implements OnInit, OnDestroy {
   private subscriptions: Subscription[] = [];
-  protected data: any;
+  protected data: MostPopularResponse|null;
   isOpen = true;
   constructor(private firstService: FirstService) {
+    this.data = null;
     console.log("first component const");
   }
   

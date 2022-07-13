@@ -2,6 +2,7 @@ import { Injectable, OnDestroy, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { MostPopularResponse } from 'src/app/models/NYTimes';
 
 @Injectable()
 export class FirstService implements OnInit, OnDestroy {
@@ -12,8 +13,8 @@ export class FirstService implements OnInit, OnDestroy {
     console.log("first service const")
   }
   
-  public getData(): Observable<any> {
-    return this.http.get(this.url);
+  public getData(): Observable<MostPopularResponse> {
+    return this.http.get<MostPopularResponse>(this.url);
   }
 
   ngOnInit(): void {

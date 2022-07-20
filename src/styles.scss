@@ -1,4 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: rgb(34, 193, 195);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(231, 172, 44, 1) 75%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(231, 172, 44, 1) 75%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(231, 172, 44, 1) 75%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#e7ac2c",GradientType=1);
+}
+
+.mat-toolbar.mat-primary {
+  background: rgb(0 0 0 / 26%);
+  color: #fff;
+}

@@ -1,0 +1,32 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-scroll-auto {
+  overflow: auto;
+}
+
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.box {
+  margin:auto;
+}
+
+.bar {
+  border-radius: 90px;
+  width: auto;
+}
+
+.margin-30 {
+  margin: 30px;
+}

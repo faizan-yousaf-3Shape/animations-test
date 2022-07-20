@@ -1,4 +1,52 @@
-<app-side-menu></app-side-menu>
-<div [@routeAnimations]="getRouteAnimationData()">
-    <router-outlet></router-outlet>
+<div
+  fxLayout="column"
+  fxLayout.lt-sm="column-reverse"
+  class="overflow-hidden main"
+>
+  <!-- header -->
+  <mat-toolbar color="primary" fxFlex="0 0 auto" class="bar margin-30">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      (click)="add()"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      (click)="remove()"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>remove</mat-icon>
+    </button>
+  </mat-toolbar>
+  <!-- content -->
+  <div
+    @list
+    class="overflow-scroll-auto margin-30"
+    fxLayout="row"
+    fxLayout.lt-sm="column"
+    fxLayoutGap="20px"
+  >
+    <app-box
+      fxFlexAlign="center"
+      fxFlex="0 0 auto"
+      @items
+      *ngFor="let box of boxes"
+    ></app-box>
+  </div>
+  <!-- <div >
+
+  </div> -->
 </div>
